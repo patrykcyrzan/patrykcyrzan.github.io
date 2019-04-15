@@ -315,7 +315,8 @@
 
                 <div class="footer-subscribe">
 
-                    <p>Chcesz być z nami na bieżąco? Zapisz się na newsletter. Zapisując się na newsletter wyrażasz zgodę na przetwarzanie Twojego adresu email w celu realizacji newslettera.</p>
+                    <p>Chcesz być z nami na bieżąco? Zapisz się na newsletter. Zapisując się na newsletter wyrażasz zgodę na przetwarzanie Twojego adresu email w celu realizacji newslettera.
+                    Jednocześnie wiesz, że w każdej chwili możesz tę zgodę wycofać.</p>
 
                     <div class="subscribe-form">
 
@@ -324,10 +325,16 @@
                             function openModal() {
                                 $("#newsletterModal").modal()
                             }
+                            function resetForm() {
+                                $("#mc-form").trigger('reset');
+                            }
                         </script>
                                 <iframe
                             } name="hidden_iframe" id="hidden_iframe" style="display:none;"
-                                onload="if(submitted) {openModal();}"></iframe>
+                                onload="if(submitted) {
+                                    resetForm();
+                                    window.location.href = '#top';
+                                    openModal();}"></iframe>
 
                         <form id="mc-form" class="group" novalidate="true"
                               action="https://docs.google.com/forms/d/e/1FAIpQLSfkZ5yA2GEjrkFz-6BPFoU8L3cdRFedDNBxRIzHppGCVQxtOg/formResponse"
