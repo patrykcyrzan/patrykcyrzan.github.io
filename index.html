@@ -6,6 +6,7 @@
 <!--<![endif]-->
 
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="//fonts.googleapis.com/css?family=Anton|Montserrat:400,500,500i" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
@@ -291,6 +292,21 @@
             </div>
         </div>
 
+        <div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content modal-content-custom">
+                    <div class="modal-header-custom modal-header">
+                        <button type="button" class="close close-custom" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times</span>
+                        </button>
+                    </div>
+                    <div class="modal-body modal-body-custom">
+                        <h5>Dziękujemy. Skontaktujemy się z Tobą!</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row contact-content" data-aos="fade-up">
 
             <div class="contact-primary">
@@ -302,9 +318,16 @@
                     <p>Chcesz być z nami na bieżąco? Zapisz się na newsletter. Zapisując się na newsletter wyrażasz zgodę na przetwarzanie Twojego adresu email w celu realizacji newslettera.</p>
 
                     <div class="subscribe-form">
+
                         <script type="text/javascript">var submitted=false;</script>
-                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-                                onload="if(submitted) {window.location='index.html';}"></iframe>
+                        <script type="text/javascript">
+                            function openModal() {
+                                $("#newsletterModal").modal()
+                            }
+                        </script>
+                                <iframe
+                            } name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                                onload="if(submitted) {openModal();}"></iframe>
 
                         <form id="mc-form" class="group" novalidate="true"
                               action="https://docs.google.com/forms/d/e/1FAIpQLSfkZ5yA2GEjrkFz-6BPFoU8L3cdRFedDNBxRIzHppGCVQxtOg/formResponse"
@@ -451,6 +474,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 

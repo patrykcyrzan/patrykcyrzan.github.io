@@ -1829,6 +1829,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .home-content__main {
     padding-top: 24rem;
     position: relative;
+    display: block;
 }
 
 .home-content__buttons {
@@ -2801,6 +2802,7 @@ html.no-csstransitions .home-content__main {
     padding-bottom: 9rem;
     text-align: center;
     position: relative;
+    display: block;
 }
 
 .clients__slide {
@@ -3197,6 +3199,30 @@ html.no-csstransitions .home-content__main {
 
 .contact-social li:last-child {
     margin: 0;
+}
+
+.modal-content-custom {
+    background-color: #121212;
+}
+
+.modal-header-custom {
+    border-bottom: 0;
+}
+
+.modal-body-custom {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--dark-accent-color);
+}
+
+.modal-body-custom h5 {
+    margin-top: 0;
+    color: var(--dark-accent-color);
+}
+
+.close-custom {
+    color: #ffffff;
+    font-size: 2.0rem;
 }
 
 .message-warning,
